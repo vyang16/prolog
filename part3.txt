@@ -1,0 +1,162 @@
+Script started on 2019-03-20 16:03:29+0800
+]0;viviane@vyang: ~/Programming/AI/Lab 2[01;32mviviane@vyang[00m:[01;34m~/Programming/AI/Lab 2[00m$ ls
+ factorial.pl                         part1.txt   takeout.pl
+ family.pl                            part3.txt   user-edit.pl
+'intro to logic programming v2.pdf'   p.pl
+]0;viviane@vyang: ~/Programming/AI/Lab 2[01;32mviviane@vyang[00m:[01;34m~/Programming/AI/Lab 2[00m$ swirl[K[K[1Plsswipl factorial.pl ls[Kswipl
+Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit http://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- consult('fal[Kmily.pl'[12G[23G)[11G[24G.
+[31;1mERROR: /home/viviane/Programming/AI/Lab 2/family.pl:7:13: Syntax error: Operator expected
+[0m[1mtrue.[0m
+
+?- [][]f]a]m]i]l]y].]o]][Kp]l]
+|    .
+[31;1mERROR: Type error: `dict' expected, found `family' (an atom)
+ERROR: In:
+ERROR:   [11] throw(error(type_error(dict,family),_3748))
+ERROR:    [9] '$dicts':'.'(family,pl,_3788) at /usr/lib/swi-prolog/boot/dicts.pl:46
+ERROR:    [8] '<meta-call>'(user:(...,...)) <foreign>
+ERROR:    [7] <user>
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- [family.pl].a[1@'ffamily.pl]'].[5G[16G
+[31;1mERROR: /home/viviane/Programming/AI/Lab 2/family.pl:7:13: Syntax error: Operator expected
+[0m[1mtrue.[0m
+
+?- consult(Ä[K'
+factorial.pl
+family.pl
+intro to logic programming v2.pdf
+part1.txt
+part3.txt
+p.pl
+takeout.pl
+user-edit.pl
+[K?- consult('f[Kfamily.pl'[12G[23G)[11G[24G.
+[31;1mERROR: /home/viviane/Programming/AI/Lab 2/family.pl:7:13: Syntax error: Operator expected
+[0m[1mtrue.[0m
+
+?- consult('family.pl').[1@rc[1@ec
+[31;1mERROR: /home/viviane/Programming/AI/Lab 2/family.pl:7:13: Syntax error: Operator expected
+[0m[1mtrue.[0m
+
+?- reconsult('family.pl').p[P.[P.[P.[P.[1@c.[1@t.[1@o.[1@r.[1@i.[1@a.[1@l.
+[1mtrue.[0m
+
+?- edif[Kt('family.pl'[9G[20G)[8G[21G.
+[1mtrue.[0m
+
+?- reconsult('family.pl'[14G[25G)[13G[26Gl[K.
+[1mtrue.[0m
+
+?- reconsult('family.pl').[4G[5Pedi[22G[4G[8@reconsult('factorial[30G[17G[3Pmily[27G[4G[2Pc[25G
+[1mtrue.[0m
+
+?- [][]']f]a]m]i]l]y.pl]'][5G[16G,] ]']p].]p]l]'][18G[24G[P''p.pl'].
+[1mtrue.[0m
+
+?- [][]']u]s]e]r].]][K-]e]d]i]t]'][5G[16G].
+[1mtrue.[0m
+
+?- user-edit(Fie[Kle)[13G[19G:-
+|    name(File,FileString)[10G[27G,
+|    name('open -e[K[K[K[K[K[Ksubl[K[K[K[Kati[Kom'[11G[17G, Tes[KxtEditE[KString)[10G[34G,
+|    
+|    append(TextEditString, FileString, E[K[K[K[K[K[K[K[K[K[K[K[KFileString,Ed[KDIT)[12G[44G,
+|    name(E;[K,EDOT[K[KIT)[10G[18G,
+|    S[Kshell(E)(E).
+[31;1mERROR: Undefined procedure: (:-)/2
+ERROR:   Rules must be loaded from a file
+ERROR:   See FAQ at http://www.swi-prolog.org/FAQ/ToplevelMode.txt
+ERROR: In:
+ERROR:    [9] throw(error(existence_error(procedure,...),_4028))
+ERROR:    [8] '$dwim':dwim_existence_error(error,user:(:-)/2) at /usr/lib/swi-prolog/boot/dwim.pl:113
+ERROR:    [6] '$dwim':correct_goal((user- ... :- ...,...),user,['File'=_4144,...|...],_4114) at /usr/lib/swi-prolog/boot/dwim.pl:85
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- halt.
+]0;viviane@vyang: ~/Programming/AI/Lab 2[01;32mviviane@vyang[00m:[01;34m~/Programming/AI/Lab 2[00m$ swil[Krk[Kl[K[Kpl
+Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit http://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- user-edit(File)[13G[19G:-
+|    name(File,FileSting[K[K[Kring)[10G[27G,
+|    name('open -e'[11G[20G,TextEditSri[K[Ktring9[K)[10G[36G,
+|    
+|    append(TextEditString,FileString,EDIT)[12G[44Gl[K,
+|    name(E,Ed[KDIT)[10G[18G,
+|    shell(E)(E),[K.
+[31;1mERROR: Undefined procedure: (:-)/2
+ERROR:   Rules must be loaded from a file
+ERROR:   See FAQ at http://www.swi-prolog.org/FAQ/ToplevelMode.txt
+ERROR: In:
+ERROR:    [9] throw(error(existence_error(procedure,...),_5460))
+ERROR:    [8] '$dwim':dwim_existence_error(error,user:(:-)/2) at /usr/lib/swi-prolog/boot/dwim.pl:113
+ERROR:    [6] '$dwim':correct_goal((user- ... :- ...,...),user,['File'=_5576,...|...],_5546) at /usr/lib/swi-prolog/boot/dwim.pl:85
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- 
+[1]+  Stopped                 swipl
+]0;viviane@vyang: ~/Programming/AI/Lab 2[01;32mviviane@vyang[00m:[01;34m~/Programming/AI/Lab 2[00m$ [K]0;viviane@vyang: ~/Programming/AI/Lab 2[01;32mviviane@vyang[00m:[01;34m~/Programming/AI/Lab 2[00m$ exit
+There are stopped jobs.
+]0;viviane@vyang: ~/Programming/AI/Lab 2[01;32mviviane@vyang[00m:[01;34m~/Programming/AI/Lab 2[00m$ exit
+[27G,
+|    name('open -e[K[K[K[K[K[Ksubl[K[K[K[Kati[Kom'[11G[17G, Tes[KxtEditE[KString)[10G[34G,
+|    
+|    append(TextEditString, FileString, E[K[K[K[K[K[K[K[K[K[K[K[KFileString,Ed[KDIT)[12G[44G,
+|    name(E;[K,EDOT[K[KIT)[10G[18G,
+|    S[Kshell(E)(E).
+[31;1mERROR: Undefined procedure: (:-)/2
+ERROR:   Rules must be loaded from a file
+ERROR:   See FAQ at http://www.swi-prolog.org/FAQ/ToplevelMode.txt
+ERROR: In:
+ERROR:    [9] throw(error(existence_error(procedure,...),_4028))
+ERROR:    [8] '$dwim':dwim_existence_error(error,user:(:-)/2) at /usr/lib/swi-prolog/boot/dwim.pl:113
+ERROR:    [6] '$dwim':correct_goal((user- ... :- ...,...),user,['File'=_4144,...|...],_4114) at /usr/lib/swi-prolog/boot/dwim.pl:85
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- halt.
+]0;viviane@vyang: ~/Programming/AI/Lab 2[01;32mviviane@vyang[00m:[01;34m~/Programming/AI/Lab 2[00m$ swil[Krk[Kl[K[Kpl
+Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit http://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- user-edit(File)[13G[19G:-
+|    name(File,FileSting[K[K[Kring)[10G[27G,
+|    name('open -e'[11G[20G,TextEditSri[K[Ktring9[K)[10G[36G,
+|    
+|    append(TextEditString,FileString,EDIT)[12G[44Gl[K,
+|    name(E,Ed[KDIT)[10G[18G,
+|    shell(E)(E),[K.
+[31;1mERROR: Undefined procedure: (:-)/2
+ERROR:   Rules must be loaded from a file
+ERROR:   See FAQ at http://www.swi-prolog.org/FAQ/ToplevelMode.txt
+ERROR: In:
+ERROR:    [9] throw(error(existence_error(procedure,...),_5460))
+ERROR:    [8] '$dwim':dwim_existence_error(error,user:(:-)/2) at /usr/lib/swi-prolog/boot/dwim.pl:113
+ERROR:    [6] '$dwim':correct_goal((user- ... :- ...,...),user,['File'=_5576,...|...],_5546) at /usr/lib/swi-prolog/boot/dwim.pl:85
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+[0m?- 
+[1]+  Stopped                 swipl
+]0;viviane@vyang: ~/Programming/AI/Lab 2[01;32mviviane@vyang[00m:[01;34m~/Programming/AI/Lab 2[00m$ [K]0;viviane@vyang: ~/Programming/AI/Lab 2[01;32mviviane@vyang[00m:[01;34m~/Programming/AI/Lab 2[00m$ exit
+There are stopped jobs.
+]0;viviane@vyang: ~/Programming/AI/Lab 2[01;32mviviane@vyang[00m:[01;34m~/Programming/AI/Lab 2[00m$ 
