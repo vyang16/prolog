@@ -1,22 +1,22 @@
-male(jerry).
-male(stuart).
-male(warren).
-male(peter).
-female(kather).
-female(maryalice).
-female(ann).
-brother(jerry,stuart).
-brother(jerry,kather).
 brother(peter, warren).
-sister(ann, maryalice).
+brother(jerry,kather).
+brother(jerry,stuart).
+male(stuart).
+male(peter).
+male(warren).
+male(jerry).
+female(kather).
+female(ann).
+female(maryalice).
 sister(kather,jerry).
-parent(warren,jerry).
+sister(ann, maryalice).
 parent(maryalice,jerry).
+parent(warren,jerry).
 
 parent_of(X,Y):-
     parent(X,Y);
-    parent(X,Z),
-    sibling(Y,Z).
+    sibling(Y,Z),
+    parent(X,Z).
 
 sibling(X,Y):-
     sister(X,Y);

@@ -1,85 +1,79 @@
-male(ke).
-male(kevin).
-male(gang).
-male(naiqiao).
-male(yuanxiang).
-
+female(li).
 female(viviane).
 female(yvonne).
-female(li).
-female(liying).
-female(shirong).
 female(liping).
+female(shirong).
+female(liying).
 
-sister(yvonne, viviane).
-sister(viviane, yvonne).
-sister(li, gang).
-brother(gang, li).
+male(kevin).
+male(yuanxiang).
+male(ke).
+male(naiqiao).
+male(gang).
 
-parent_of(naiqiao,ke).
-parent_of(liying, ke).
-parent_of(shirong, li).
-parent_of(yuanxiang, li).
-parent_of(shirong, gang).
-parent_of(yuanxiang, gang).
-parent_of(li, viviane).
-parent_of(ke, viviane).
-parent_of(li, yvonne).
-parent_of(ke, yvonne).
-parent_of(gang, kevin).
-parent_of(liping, kevin).
+sister(yvonne,viviane).
+brother(gang,li).
 
-father(X,Y) :-
+parent(shirong,li).
+parent(yuanxiang,li).
+parent(li,viviane).
+parent(ke,viviane).
+parent(liying,ke).
+parent(naiqiao,ke).
+parent(gang,kevin).
+parent(liping,kevin).
+
+parent_of(X,Y):-
+    parent(X,Y);
+    sibling(Y,Z),
+    parent(X,Z).
+
+father(X,Y):-
     parent_of(X,Y),
     male(X).
 
-mother(X,Y) :-
+mother(X,Y):-
     parent_of(X,Y),
     female(X).
 
-son(X,Y) :-
+son(X,Y):-
     parent_of(Y,X),
     male(X).
 
-daughter(X,Y) :-
+daugther(X,Y):-
     parent_of(Y,X),
     female(X).
 
-grandfather(X,Y) :-
+grandfather(X,Y):-
     parent_of(X,Z),
     parent_of(Z,Y),
     male(X).
 
-sibling(X,Y) :-
-    brother(X,Y), X\==Y;
-    sister(X,Y), X\==Y.
+sibling(X,Y):-
+    sister(X,Y);
+    brother(X,Y);
+    sister(Y,X);
+    brother(Y,X).
 
-spouse(X,Y) :-
+aunt(X,Y):-
+    sibling(X,Z),
+    parent_of(Z,Y),
+    female(X);
+    spouse(X,T),
+    sibling(T,G),
+    parent_of(G,Y),
+    female(X).
+
+uncle(X,Y):-
+    sibling(X,Z),
+    parent_of(Z,Y),
+    male(X).
+
+spouse(X,Y):-
     parent_of(X,Z),
     parent_of(Y,Z),
     X\==Y.
 
-aunt(X,Y) :-
-    spouse(X,Z),
-    brother(Z,W),
-    parent_of(W,Y);
-    sister(X,T),
-    parent_of(T,Y).
-
-uncle(X,Y) :-
-    spouse(X,Z),
-    sister(Z,W),
-    parent_of(W,Y);
-    brother(X,T),
-    parent_of(T,Y).
-
-cousin(X,Y) :-
-    parent_of(T,X),
-    uncle(T,Y).
-
-
-
-
-
-
-
+cousin(X,Y):-
+    parent_of(Z,X),
+    uncle(Z,Y).
